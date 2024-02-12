@@ -22,10 +22,3 @@ A (fairly) simple way to quickly set up a fresh Windows, utelizing INI configs. 
   * Installation via URLS
   * Installation via [SteamGridDB/SGDBoop](https://github.com/SteamGridDB/SGDBoop) for non-steam games.
 * .INI Config Files
-
-* Installation of software via [Chocolatey](https://github.com/chocolatey/choco), including Chocolatey itself
-  * Installation of non-Chocolatey software via URLs
-* Installation of fonts from [Google Fonts](https://github.com/google/fonts) and [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
-* Installation of Steam assets from [SteamGridDB](https://www.steamgriddb.com/)
-  * Installation of [SteamGridDB/SGDBoop](https://github.com/SteamGridDB/SGDBoop)
-* .INI Config Files
