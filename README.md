@@ -21,4 +21,5 @@ A (fairly) simple way to quickly set up a fresh Windows, utelizing INI configs. 
 * Installation of Steam assets from [SteamGridDB](https://www.steamgriddb.com/)
   * Installation via URLS
   * Installation via [SteamGridDB/SGDBoop](https://github.com/SteamGridDB/SGDBoop) for non-steam games.
+* Install ReviOS via [Playbook](https://github.com/meetrevision/playbook)
 * .INI Config Files
