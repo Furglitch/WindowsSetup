@@ -7,19 +7,20 @@
 A (fairly) simple way to quickly set up a fresh Windows, utelizing INI configs. (Does not install Windows, just tools)
 
 ## Current Features
-* **In Development**
+In development...
 
 ## Dependencies
 * [JFormDesigner/FlatLaf](https://github.com/JFormDesigner/FlatLaf) - Dark Theme
+* [ini4j](https://ini4j.sourceforge.net/) - Parsing of .INI config files
 
 ## Planned Features
-* [ ] Installation of Chocolatey
-* [ ] Installation of ChocolateyGUI
+* [X] Installation of Chocolatey
+* [X] Installation of ChocolateyGUI
 * [ ] Installation of software via Chocolatey
 * [ ] Installation of software via URLs
 * [ ] Installation of fonts from [Google Fonts](https://github.com/google/fonts) and [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
 * [ ] Installation of Steam assets from [SteamGridDB](https://www.steamgriddb.com/)
   * [ ] Installation via URLS
   * [ ] Installation via [SteamGridDB/SGDBoop](https://github.com/SteamGridDB/SGDBoop) for non-steam games.
-* [ ] Install AtlasOS or ReviOS via [Playbook](https://github.com/meetrevision/playbook)
-* [ ] .INI Config Files
+* [ ] Installation of AtlasOS via [Playbook](https://github.com/meetrevision/playbook)
+* [X] .INI config files
