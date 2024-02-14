@@ -24,3 +24,6 @@ In development...
   * [ ] Installation via [SteamGridDB/SGDBoop](https://github.com/SteamGridDB/SGDBoop) for non-steam games.
 * [ ] Installation of AtlasOS via [Playbook](https://github.com/meetrevision/playbook)
 * [X] .INI config files
+  * [X] Parsing Steam Grid config INI
+  * [X] Parsing Chocolatey config INI
+  * [X] Parsing URL Download config INI
