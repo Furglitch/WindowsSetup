@@ -9,6 +9,13 @@ A (fairly) simple way to quickly set up a fresh Windows, utelizing INI configs. 
 ## Current Features
 In development...
 
+## Usage
+No Java / On a fresh install of Windows...
+* Download 'run.bat' and place it in the same folder as 'WindowsSetup.jar', then run 'run.bat' as an administrator
+
+If you already have Java installed...
+* Open terminal as an administrator and run `java -jar path/to/WindowsSetup.jar`
+
 ## Dependencies
 * [JFormDesigner/FlatLaf](https://github.com/JFormDesigner/FlatLaf) - Dark Theme
 * [ini4j](https://ini4j.sourceforge.net/) - Parsing of .INI config files
