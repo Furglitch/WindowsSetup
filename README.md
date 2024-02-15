@@ -1,4 +1,4 @@
-# FurglitchOS Setup
+# Furglitch Windows Setup
 ![image](https://img.shields.io/badge/Windows-0078d4?style=for-the-badge&logo=windows-11&logoColor=white)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![image](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) 
@@ -15,6 +15,7 @@ No Java / On a fresh install of Windows...
 
 If you already have Java installed...
 * Open terminal as an administrator and run `java -jar path/to/WindowsSetup.jar`
+* Or run 'run.bat' as an administrator. It should detect you already have Java and run
 
 ## Dependencies
 * [JFormDesigner/FlatLaf](https://github.com/JFormDesigner/FlatLaf) - Dark Theme
