@@ -47,13 +47,13 @@ if %errorlevel% neq 0 (
     echo Java JDK 21 installation successful...
     echo.
     echo Running WindowsSetup.jar...
-    start /min cmd /c ""C:\Program Files\Java\jdk-21\bin\java.exe" -jar "%~dp0WindowsSetup.jar""
+    start cmd /c ""C:\Program Files\Java\jdk-21\bin\java.exe" -jar "%~dp0WindowsSetup.jar""
 
 ) else ( 
     echo Java detected.
     echo.
     echo Running WindowsSetup.jar...
-    start /min cmd /c "java -jar %~dp0WindowsSetup.jar"
+    start cmd /c "java -jar %~dp0WindowsSetup.jar"
 )
 
 timeout 5
