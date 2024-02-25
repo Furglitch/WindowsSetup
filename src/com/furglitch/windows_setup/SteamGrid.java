@@ -151,11 +151,10 @@ public class SteamGrid {
             if (JOptionPane.showConfirmDialog(null, "Clear existing Steam Grids?") == 0) {
                 App.ini.delete(gridPath);
                 App.ini.delete(iconPath);
-            } else {
-                gridPath.mkdirs();
-                iconPath.mkdirs();
             }
         }
+        gridPath.mkdirs();
+        iconPath.mkdirs();
 
         for (gridData links : data) {
             String name = links.getName();

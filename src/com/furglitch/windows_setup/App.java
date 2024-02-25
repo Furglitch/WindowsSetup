@@ -170,6 +170,7 @@ public class App {
                 if (line.hashCode() != prev) App.out(line.trim());
                 prev = line.hashCode();
             }
+
             if (process.exitValue() != 0) {
                 BufferedReader errorReader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
                 String errorOutput = errorReader.lines().collect(Collectors.joining(System.lineSeparator()));

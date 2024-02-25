@@ -119,11 +119,21 @@ public class Config {
             for (String sectionName : App.ini.steamIni.keySet()) {
                 Ini.Section section = App.ini.steamIni.get(sectionName);
                 String name = sectionName;
-                String id = section.get("id").trim();
-                String grid = section.get("grid").trim();
-                String hero = section.get("hero").trim();
-                String logo = section.get("logo").trim();
-                String icon = section.get("icon").trim();
+                String id = section.get("id");
+                    if (id != null && id.isEmpty()) id = null;
+                    else if (id != null) id = id.trim();
+                String grid = section.get("grid");
+                    if (grid != null && grid.isEmpty()) grid = null;
+                    else if (grid != null) grid = grid.trim();
+                String hero = section.get("hero");
+                    if (hero != null && hero.isEmpty()) hero = null;
+                    else if (hero != null) hero = hero.trim();
+                String logo = section.get("logo");
+                    if (logo != null && logo.isEmpty()) logo = null;
+                    else if (logo != null) logo = logo.trim();
+                String icon = section.get("icon");
+                    if (icon != null && icon.isEmpty()) icon = null;
+                    else if (icon != null) icon = icon.trim();
 
                 if (id == null) App.out("Entry for " + name + " in steam-grids.ini does not contain a Steam App ID, or is not 'nonsteam'!\n\nEntry will not be added to data list", "Parse Error", "Error");
                 else if (hero == null && grid == null && logo == null && icon == null) App.out("Entry for " + name + " in steam-grids.ini does not contain any SGDB image IDs!\n\nEntry will not be added to data list", "Parse Error", "Error");
