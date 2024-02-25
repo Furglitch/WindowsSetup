@@ -39,4 +39,4 @@ Distributed under [Apache License v2.0](https://github.com/Furglitch/WindowsSetu
 * [ ] Installation of fonts from [Google Fonts](https://github.com/google/fonts) and [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
 
 ## Known issues
-* 
+* When downloading Steam assets via SGDBoop, the program does not wait for the SGDBoop instance to finish before continuing.
