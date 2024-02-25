@@ -73,6 +73,8 @@ public class Config {
 
     public List<chocoData> parseChoco(boolean check) {
         if (check) {
+            chocoPackages.clear();
+
             for (String sectionName : App.ini.chocoIni.keySet()) {
                 Ini.Section section = App.ini.chocoIni.get(sectionName);
                 String name = sectionName;
@@ -93,6 +95,8 @@ public class Config {
 
     public List<urlData> parseURL(boolean check) {
         if (check) {
+            urlLinks.clear();
+
             for (String sectionName : App.ini.webdlIni.keySet()) {
                 Ini.Section section = App.ini.webdlIni.get(sectionName);
                 String name = sectionName;
@@ -113,6 +117,7 @@ public class Config {
 
     public List<gridData> parseSG(boolean check) {
         if (check) {
+            steamGridIDs.clear();
 
             App.sgdb.getSGDBKey();
 

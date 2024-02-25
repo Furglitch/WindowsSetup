@@ -44,7 +44,7 @@ public class App {
     static boolean hasSteamIni = false;
 
     public static void main(String[] args) {
-
+        App.out("New process started");
         isAdmin = adminCheck();
         ui.create();
         if (isAdmin) {

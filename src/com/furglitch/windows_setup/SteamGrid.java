@@ -17,6 +17,8 @@ import javax.swing.JEditorPane;
 import javax.swing.JOptionPane;
 import javax.swing.event.HyperlinkEvent;
 import javax.swing.event.HyperlinkListener;
+import com.sun.jna.platform.win32.Advapi32Util;
+import static com.sun.jna.platform.win32.WinReg.HKEY_LOCAL_MACHINE;
 
 import org.json.JSONObject;
 
@@ -46,9 +48,22 @@ public class SteamGrid {
 
     public void getBoop() {
         if (!boopExists) {
+            if (!Advapi32Util.registryKeyExists(HKEY_LOCAL_MACHINE, "SOFTWARE\\Wow6432Node\\Microsoft\\VisualStudio\\14.0\\VC\\Runtimes\\x64")) installVCR();
+            else App.out("Visual C++ Redist exists!");
             App.download("https://github.com/SteamGridDB/SGDBoop/releases/latest/download/sgdboop-win64.zip", ".\\downloads\\sgdboop-win64.zip", "SGDBoop");
             App.unzip("./downloads/sgdboop-win64.zip", "C:/Program Files (x86)/Steam/sgdboop");
             boopExists = App.execute("\"C:/Program Files (x86)/Steam/sgdboop/sgdboop.exe\"");
+        }
+    }
+
+    public void installVCR() {
+        if (App.hasChoco) {
+            if (App.hasChocoInit) App.execute("choco install vcredist140 -y");
+            else App.execute("C:\\ProgramData\\chocolatey\\bin\\choco.exe install vcredist140 -y");
+        }
+        else {
+            App.download("https://aka.ms/vs/17/release/vc_redist.x64.exe", ".\\downloads\\vc_redist.x64.exe", "latest Visual C++ Redistributable (x64)");
+            App.execute(".\\downloads\\vc_redist.x64.exe /S");
         }
     }
 
@@ -164,10 +179,10 @@ public class SteamGrid {
             if (id.equals("nonsteam")) {
                 App.out("Running SGDBoop Command for " + name + " images");
                 try {
-                    if (grid != null) App.execute("rundll32 url.dll,FileProtocolHandler " + grid);
-                    if (hero != null) App.execute("rundll32 url.dll,FileProtocolHandler " + hero);
-                    if (logo != null) App.execute("rundll32 url.dll,FileProtocolHandler " + logo);
-                    if (icon != null) App.execute("rundll32 url.dll,FileProtocolHandler " + icon);
+                    if (grid != null) App.execute("powershell Start-Process " + grid);
+                    if (hero != null) App.execute("powershell Start-Process " + hero);
+                    if (logo != null) App.execute("powershell Start-Process " + logo);
+                    if (icon != null) App.execute("powershell Start-Process " + icon);
                 } catch (Exception e) { App.out(e.getMessage(), "Exception Running SGDB Command", "Exception"); }
             } else {
                 App.out("Downloading images for " + name);
